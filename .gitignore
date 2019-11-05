@@ -1,0 +1,11 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/Account/obj
+/microservices/.vs/microservices
+/microservices/bin/Debug/netcoreapp2.1
+/microservices/obj
+/Banking/obj
+/chequebook/obj
+/Transactions/obj
