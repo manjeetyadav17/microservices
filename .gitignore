@@ -10,3 +10,6 @@
 /chequebook/obj
 /Transactions/obj
 /Account/bin/Debug/netcoreapp3.0
+/Banking/bin/Debug/netcoreapp3.0
+/chequebook/bin/Debug/netcoreapp3.0
+/Transactions/bin/Debug/netcoreapp3.0

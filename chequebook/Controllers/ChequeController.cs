@@ -5,33 +5,33 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Account.Controllers
+namespace chequebook.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class AccountController : ControllerBase
+    public class ChequeController : ControllerBase
     {
-        // GET: api/Account
+        // GET: api/Cheque
         [HttpGet]
-        public string Get()
+        public IEnumerable<string> Get()
         {
-            return "Hi i am from Account contoller";
+            return new string[] { "value1", "value2" };
         }
 
-        // GET: api/Account/5
+        // GET: api/Cheque/5
         [HttpGet("{id}", Name = "Get")]
         public string Get(int id)
         {
             return "value";
         }
 
-        // POST: api/Account
+        // POST: api/Cheque
         [HttpPost]
         public void Post([FromBody] string value)
         {
         }
 
-        // PUT: api/Account/5
+        // PUT: api/Cheque/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] string value)
         {
