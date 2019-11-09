@@ -18,7 +18,20 @@ namespace Banking
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
-                .ConfigureWebHostDefaults(webBuilder =>
+            .ConfigureAppConfiguration((hostingContext, config) =>
+            {
+
+                config.SetBasePath(hostingContext.HostingEnvironment.ContentRootPath)
+
+                      .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
+
+                      .AddJsonFile($"appsettings.{hostingContext.HostingEnvironment.EnvironmentName}.json", true, true)
+
+                      .AddJsonFile("ocelot.json", optional: false, reloadOnChange: true)
+
+                      .AddEnvironmentVariables();
+
+            }).ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
                 });
