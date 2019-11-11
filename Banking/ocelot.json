@@ -12,7 +12,15 @@
       "DownstreamScheme": "https",
       "UseServiceDiscovery": true,
       "ServiceName": "account",
-      "UpstreamPathTemplate": "/account/{catchAll}",
+      "UpstreamPathTemplate": "/account",
+      "UpstreamHttpMethod": []
+    },
+    {
+      "DownstreamPathTemplate": "/api/account/{id}",
+      "DownstreamScheme": "https",
+      "UseServiceDiscovery": true,
+      "ServiceName": "account",
+      "UpstreamPathTemplate": "/account/{id}",
       "UpstreamHttpMethod": []
     },
     {

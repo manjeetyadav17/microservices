@@ -5,7 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Steeltoe.CircuitBreaker.HystrixCore" Version="2.3.0" />
     <PackageReference Include="Steeltoe.Extensions.Configuration.ConfigServerCore" Version="2.3.0" />
   </ItemGroup>
 

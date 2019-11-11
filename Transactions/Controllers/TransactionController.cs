@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
 
 namespace Transactions.Controllers
 {
@@ -11,11 +12,16 @@ namespace Transactions.Controllers
     [ApiController]
     public class TransactionController : ControllerBase
     {
+        ConfigSettings configSettings { get; set; }
+        public TransactionController(IOptions<ConfigSettings> settings)
+        {
+            configSettings = settings?.Value;
+        }
         // GET: api/Transaction
         [HttpGet]
-        public IEnumerable<string> Get()
+        public string Get()
         {
-            return new string[] { "value1", "value2" };
+            return configSettings.message;
         }
 
         // GET: api/Transaction/5

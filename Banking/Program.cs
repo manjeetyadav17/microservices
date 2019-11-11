@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Steeltoe.Extensions.Configuration.ConfigServer;
 
 namespace Banking
 {
@@ -20,7 +21,7 @@ namespace Banking
             Host.CreateDefaultBuilder(args)
             .ConfigureAppConfiguration((hostingContext, config) =>
             {
-
+                config.AddConfigServer(hostingContext.HostingEnvironment.EnvironmentName);
                 config.SetBasePath(hostingContext.HostingEnvironment.ContentRootPath)
 
                       .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)

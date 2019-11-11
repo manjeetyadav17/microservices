@@ -22,7 +22,7 @@ namespace WebApp.Controllers
         }
         public IActionResult Index()
         {
-            return Content(configSettings.message);
+            return View();//Content(configSettings.message);
         }
 
         public IActionResult Privacy()
