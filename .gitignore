@@ -24,3 +24,5 @@
 /microservices/chequebook/obj
 /microservices/Transactions/bin/Debug/netcoreapp3.0
 /microservices/Transactions/obj
+/microservices/Logging/obj
+/microservices/Logging/bin/Debug/netcoreapp3.0
