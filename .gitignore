@@ -16,3 +16,11 @@
 /microservices/WebApp/bin/Debug/netcoreapp3.0
 /microservices/WebApp/obj
 /microservices/test
+/microservices/Account/bin/Debug/netcoreapp3.0
+/microservices/Account/obj
+/microservices/Banking/bin/Debug/netcoreapp3.0
+/microservices/Banking/obj
+/microservices/chequebook/bin/Debug/netcoreapp3.0
+/microservices/chequebook/obj
+/microservices/Transactions/bin/Debug/netcoreapp3.0
+/microservices/Transactions/obj
